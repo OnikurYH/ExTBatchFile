@@ -26,6 +26,7 @@
 
 @property (nonatomic, strong) IBOutlet NSTextField *lbTargetFolder;
 @property (nonatomic, strong) IBOutlet NSTextField *txtFileNameStyle;
+@property (nonatomic, strong) IBOutlet NSTextField *lbPreview;
 @property (nonatomic, strong) IBOutlet NSButton *btnStartBatch;
 
 - (void) setTargetFolder: (NSString*) path;

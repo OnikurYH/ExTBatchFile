@@ -48,7 +48,7 @@
         NSURL *fileURL = [NSURL URLFromPasteboard:pboard];
         BOOL isDirectory;
         BOOL fileExistsAtPath = [[NSFileManager defaultManager] fileExistsAtPath:[fileURL path] isDirectory:&isDirectory];
-        if (fileExistsAtPath && isDirectory)
+        if (fileExistsAtPath && isDirectory && [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:[fileURL path] error:nil] count] > 0)
         {
             [_mainVC showOption:[fileURL path]];
             self.hidden = YES;

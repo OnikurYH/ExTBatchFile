@@ -21,18 +21,25 @@
 //  along with ExTBatchFile.  If not, see <http://www.gnu.org/licenses/>.
 
 #import "OptionView.h"
+#import "PublicValue.h"
 
 @implementation OptionView
 {
     NSString *targetFolder;
+    NSString *exampleFileName;
 }
-@synthesize lbTargetFolder, txtFileNameStyle, btnStartBatch;
+@synthesize lbTargetFolder, txtFileNameStyle, lbPreview, btnStartBatch;
 
 - (void) setTargetFolder: (NSString*) path
 {
     targetFolder = path;
     [lbTargetFolder setStringValue:targetFolder];
-    //NSLog(@"%@", targetFolder);
+    exampleFileName = [[[NSFileManager defaultManager] contentsOfDirectoryAtURL:[NSURL fileURLWithPath:targetFolder]
+                                 includingPropertiesForKeys:[NSArray arrayWithObject:NSURLNameKey]
+                                                    options:NSDirectoryEnumerationSkipsHiddenFiles
+                                                      error:nil] objectAtIndex:0];\
+    exampleFileName = [exampleFileName lastPathComponent];
+    [lbPreview setStringValue:[PublicValue getFormattedFileName:[txtFileNameStyle stringValue] index:1 fileName:exampleFileName date:@"20141129" time:@"00-00-00"]];
 }
 
 - (void) controlTextDidChange:(NSNotification *) obj
@@ -42,9 +49,23 @@
         if ([[txtFileNameStyle stringValue] isEqualToString:@""])
         {
             [btnStartBatch setEnabled: NO];
+            [btnStartBatch setTitle:@"File name format cannot be empty"];
+        }
+        else if ([[txtFileNameStyle stringValue] rangeOfString:@"{id}"].location == NSNotFound)
+        {
+            [btnStartBatch setEnabled: NO];
+            [btnStartBatch setTitle:@"File name format cannot not {id} tag"];
         }
         else
+        {
             [btnStartBatch setEnabled: YES];
+            [btnStartBatch setTitle:@"Start !"];
+            [lbPreview setStringValue:[PublicValue getFormattedFileName:[txtFileNameStyle stringValue]
+                                                    index:1
+                                                    fileName:exampleFileName
+                                                    date:@"20141129"
+                                                    time:@"00-00-00"]];
+        }
     }
 }
 

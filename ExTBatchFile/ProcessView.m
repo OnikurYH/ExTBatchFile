@@ -21,6 +21,7 @@
 //  along with ExTBatchFile.  If not, see <http://www.gnu.org/licenses/>.
 
 #import "ProcessView.h"
+#import "PublicValue.h"
 
 @interface ProcessView ()
 
@@ -47,38 +48,36 @@
     NSString *targetFolder = args[@"targetFolder"];
     NSString *fileNameStyle = args[@"fileNameStyle"];
     
+    NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
+    [DateFormatter setDateFormat:@"yyyyMMdd"];
+    NSString *date = [DateFormatter stringFromDate:[NSDate date]];
+    [DateFormatter setDateFormat:@"hh-mm-ss"];
+    NSString *time = [DateFormatter stringFromDate:[NSDate date]];
+    DateFormatter = nil;
+    
     [lbProcess setStringValue:@"Start to batch file..."];
     btnFinish.hidden = YES;
     
-    NSString* file;
-    NSDirectoryEnumerator* enumerator = [[NSFileManager defaultManager] enumeratorAtPath:targetFolder];
-    int index = 1;
-    while (file = [enumerator nextObject])
+    NSArray* files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:targetFolder error:nil];
+    int i = 0;
+    for (; i < [files count]; i++)
     {
         BOOL isDirectory = NO;
+        NSString *file = [files objectAtIndex:i];
         NSString *fileFullPath = [NSString stringWithFormat:@"%@/%@", targetFolder, file];
         [[NSFileManager defaultManager] fileExistsAtPath: fileFullPath isDirectory: &isDirectory];
         if (!isDirectory && ![file hasPrefix:@"."])
         {
-            NSString *formattedFileName = [self getFormattedFileName:fileNameStyle index: index fileName:file];
+            NSString *formattedFileName = [PublicValue getFormattedFileName:fileNameStyle index: i fileName:file date:date time:time];
             [lbProcess setStringValue: [NSString stringWithFormat:@"Rename %@ to %@", file, formattedFileName]];
             NSString *newPath = [[fileFullPath stringByDeletingLastPathComponent] stringByAppendingPathComponent:formattedFileName];
             [[NSFileManager defaultManager] moveItemAtPath:fileFullPath toPath:newPath error:nil];
-            index ++;
         }
     }
     
-    [lbProcess setStringValue:[NSString stringWithFormat:@"Batch %i files!", index]];
+    [lbProcess setStringValue:[NSString stringWithFormat:@"Batch %i files!", i]];
     btnFinish.hidden = NO;
 }
 
-- (NSString *) getFormattedFileName:(NSString *)fileNameStyle index:(int) index fileName:(NSString *) fileName
-{
-    NSString* fStr = fileNameStyle;
-    fStr = [fStr stringByReplacingOccurrencesOfString:@"{id}" withString:[NSString stringWithFormat:@"%i", index]];
-    fStr = [fStr stringByReplacingOccurrencesOfString:@"{fname}" withString:[fileName stringByDeletingPathExtension]];
-    fStr = [fStr stringByReplacingOccurrencesOfString:@"{exte}" withString:[fileName pathExtension]];
-    return fStr;
-}
 
 @end

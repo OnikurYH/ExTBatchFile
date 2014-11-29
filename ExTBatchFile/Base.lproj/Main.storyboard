@@ -329,17 +329,17 @@
                                                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </box>
-                                                <box autoresizesSubviews="NO" title="File name style" borderType="line" id="Mv2-Xc-gM3">
-                                                    <rect key="frame" x="17" y="103" width="446" height="105"/>
+                                                <box autoresizesSubviews="NO" title="File name format" borderType="line" id="Mv2-Xc-gM3">
+                                                    <rect key="frame" x="17" y="54" width="446" height="154"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView">
-                                                        <rect key="frame" x="1" y="1" width="444" height="89"/>
+                                                        <rect key="frame" x="1" y="1" width="444" height="138"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField verticalHuggingPriority="750" id="G4B-Xm-EkV">
-                                                                <rect key="frame" x="18" y="14" width="408" height="22"/>
+                                                                <rect key="frame" x="18" y="63" width="408" height="22"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="{id}.{exte}" drawsBackground="YES" id="y4K-yv-0WT">
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="{id}.{exte}" drawsBackground="YES" usesSingleLineMode="YES" id="y4K-yv-0WT">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -349,12 +349,31 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="U1Y-Jk-mpt">
-                                                                <rect key="frame" x="16" y="49" width="412" height="34"/>
+                                                                <rect key="frame" x="16" y="98" width="412" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="VJz-XV-6It">
+                                                                <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" id="VJz-XV-6It">
                                                                     <font key="font" metaFont="system"/>
-                                                                    <string key="title">Index : {id}		| Batch date : {bdate}	| File name : {fname} Extension : {exte}</string>
+                                                                    <string key="title">Index: {id}			| Batch date: {bdate}	| Batch time: {btime}
+File name: {fname}	| Extension: {exte}</string>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="iei-DF-gAG">
+                                                                <rect key="frame" x="16" y="14" width="412" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="aj3-az-rEH">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lkN-aG-war">
+                                                                <rect key="frame" x="16" y="33" width="63" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Preview" id="E99-wt-kgv">
+                                                                    <font key="font" metaFont="cellTitle"/>
+                                                                    <color key="textColor" red="0.49803921580314636" green="0.49803921580314636" blue="0.49803921580314636" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
@@ -366,6 +385,7 @@
                                             </subviews>
                                             <connections>
                                                 <outlet property="btnStartBatch" destination="WTe-tA-612" id="szM-VS-93y"/>
+                                                <outlet property="lbPreview" destination="iei-DF-gAG" id="CZE-vl-vSC"/>
                                                 <outlet property="lbTargetFolder" destination="EjC-uO-t4m" id="E4c-l0-xhS"/>
                                                 <outlet property="txtFileNameStyle" destination="G4B-Xm-EkV" id="TrI-v5-MNU"/>
                                             </connections>
