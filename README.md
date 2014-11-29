@@ -27,6 +27,8 @@ Index: `{id}`
 
 Batch date: `{bdate}`
 
+Batch time: `{btime}`
+
 Original File name: `{fname}`
 
 Original Extension: `{exte}`
@@ -38,6 +40,7 @@ File: sample.txt
 - `awesome_{id}.{exte}` → awesome_1.txt
 - `{fname}_{id}.{exte}` → sample_1.txt
 - `{bdate}.md` → 20141129.md
+- `{btime}.md` → 00-00-00.md
 
 
 ## Developmant
