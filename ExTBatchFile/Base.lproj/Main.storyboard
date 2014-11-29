@@ -393,6 +393,15 @@ File name: {fname}	| Extension: {exte}</string>
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="w11-44-nbz">
+                                <rect key="frame" x="303" y="258" width="178" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Develop by: OnikurChan (TsnYikHei)" id="mZy-h8-stN">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" red="0.5871397852897644" green="0.58712220191955566" blue="0.58713215589523315" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
