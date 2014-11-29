@@ -13,6 +13,9 @@
 		F0EA0DA71A29796400AFB79D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0EA0DA61A29796400AFB79D /* Images.xcassets */; };
 		F0EA0DAA1A29796400AFB79D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EA0DA81A29796400AFB79D /* Main.storyboard */; };
 		F0EA0DB61A29796400AFB79D /* ExTBatchFileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DB51A29796400AFB79D /* ExTBatchFileTests.m */; };
+		F0EA0DC21A29799300AFB79D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DBF1A29799300AFB79D /* README.md */; };
+		F0EA0DC31A29799300AFB79D /* gitignore.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0EA0DC01A29799300AFB79D /* gitignore.txt */; };
+		F0EA0DC41A29799300AFB79D /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0EA0DC11A29799300AFB79D /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		F0EA0DAF1A29796400AFB79D /* ExTBatchFileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExTBatchFileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EA0DB41A29796400AFB79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0EA0DB51A29796400AFB79D /* ExTBatchFileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExTBatchFileTests.m; sourceTree = "<group>"; };
+		F0EA0DBF1A29799300AFB79D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0EA0DC01A29799300AFB79D /* gitignore.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore.txt; sourceTree = "<group>"; };
+		F0EA0DC11A29799300AFB79D /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 		F0EA0D901A29796400AFB79D = {
 			isa = PBXGroup;
 			children = (
+				F0EA0DBF1A29799300AFB79D /* README.md */,
+				F0EA0DC01A29799300AFB79D /* gitignore.txt */,
+				F0EA0DC11A29799300AFB79D /* LICENSE.txt */,
 				F0EA0D9B1A29796400AFB79D /* ExTBatchFile */,
 				F0EA0DB21A29796400AFB79D /* ExTBatchFileTests */,
 				F0EA0D9A1A29796400AFB79D /* Products */,
@@ -196,8 +205,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0EA0DC41A29799300AFB79D /* LICENSE.txt in Resources */,
 				F0EA0DA71A29796400AFB79D /* Images.xcassets in Resources */,
 				F0EA0DAA1A29796400AFB79D /* Main.storyboard in Resources */,
+				F0EA0DC31A29799300AFB79D /* gitignore.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +228,7 @@
 			files = (
 				F0EA0DA51A29796400AFB79D /* ViewController.m in Sources */,
 				F0EA0DA21A29796400AFB79D /* main.m in Sources */,
+				F0EA0DC21A29799300AFB79D /* README.md in Sources */,
 				F0EA0DA01A29796400AFB79D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
