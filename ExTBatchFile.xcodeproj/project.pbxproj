@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		F0EA0DA01A29796400AFB79D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0D9F1A29796400AFB79D /* AppDelegate.m */; };
 		F0EA0DA21A29796400AFB79D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DA11A29796400AFB79D /* main.m */; };
-		F0EA0DA51A29796400AFB79D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DA41A29796400AFB79D /* ViewController.m */; };
+		F0EA0DA51A29796400AFB79D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DA41A29796400AFB79D /* MainViewController.m */; };
 		F0EA0DA71A29796400AFB79D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0EA0DA61A29796400AFB79D /* Images.xcassets */; };
 		F0EA0DAA1A29796400AFB79D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EA0DA81A29796400AFB79D /* Main.storyboard */; };
 		F0EA0DB61A29796400AFB79D /* ExTBatchFileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DB51A29796400AFB79D /* ExTBatchFileTests.m */; };
 		F0EA0DC21A29799300AFB79D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DBF1A29799300AFB79D /* README.md */; };
 		F0EA0DC31A29799300AFB79D /* gitignore.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0EA0DC01A29799300AFB79D /* gitignore.txt */; };
 		F0EA0DC41A29799300AFB79D /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0EA0DC11A29799300AFB79D /* LICENSE.txt */; };
+		F0EA0DCF1A297D2000AFB79D /* FolderDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DCE1A297D2000AFB79D /* FolderDragView.m */; };
+		F0EA0DD51A29A0E800AFB79D /* OptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DD41A29A0E800AFB79D /* OptionView.m */; };
+		F0EA0DD81A29BC9400AFB79D /* ProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EA0DD71A29BC9400AFB79D /* ProcessView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +37,8 @@
 		F0EA0D9E1A29796400AFB79D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F0EA0D9F1A29796400AFB79D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F0EA0DA11A29796400AFB79D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F0EA0DA31A29796400AFB79D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F0EA0DA41A29796400AFB79D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F0EA0DA31A29796400AFB79D /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F0EA0DA41A29796400AFB79D /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F0EA0DA61A29796400AFB79D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F0EA0DA91A29796400AFB79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0EA0DAF1A29796400AFB79D /* ExTBatchFileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExTBatchFileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,12 @@
 		F0EA0DBF1A29799300AFB79D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F0EA0DC01A29799300AFB79D /* gitignore.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore.txt; sourceTree = "<group>"; };
 		F0EA0DC11A29799300AFB79D /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F0EA0DCD1A297D2000AFB79D /* FolderDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderDragView.h; sourceTree = "<group>"; };
+		F0EA0DCE1A297D2000AFB79D /* FolderDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderDragView.m; sourceTree = "<group>"; };
+		F0EA0DD31A29A0E800AFB79D /* OptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionView.h; sourceTree = "<group>"; };
+		F0EA0DD41A29A0E800AFB79D /* OptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionView.m; sourceTree = "<group>"; };
+		F0EA0DD61A29BC9400AFB79D /* ProcessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessView.h; sourceTree = "<group>"; };
+		F0EA0DD71A29BC9400AFB79D /* ProcessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +99,14 @@
 			children = (
 				F0EA0D9E1A29796400AFB79D /* AppDelegate.h */,
 				F0EA0D9F1A29796400AFB79D /* AppDelegate.m */,
-				F0EA0DA31A29796400AFB79D /* ViewController.h */,
-				F0EA0DA41A29796400AFB79D /* ViewController.m */,
+				F0EA0DA31A29796400AFB79D /* MainViewController.h */,
+				F0EA0DA41A29796400AFB79D /* MainViewController.m */,
+				F0EA0DCD1A297D2000AFB79D /* FolderDragView.h */,
+				F0EA0DCE1A297D2000AFB79D /* FolderDragView.m */,
+				F0EA0DD31A29A0E800AFB79D /* OptionView.h */,
+				F0EA0DD41A29A0E800AFB79D /* OptionView.m */,
+				F0EA0DD61A29BC9400AFB79D /* ProcessView.h */,
+				F0EA0DD71A29BC9400AFB79D /* ProcessView.m */,
 				F0EA0DA61A29796400AFB79D /* Images.xcassets */,
 				F0EA0DA81A29796400AFB79D /* Main.storyboard */,
 				F0EA0D9C1A29796400AFB79D /* Supporting Files */,
@@ -226,8 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0EA0DA51A29796400AFB79D /* ViewController.m in Sources */,
+				F0EA0DA51A29796400AFB79D /* MainViewController.m in Sources */,
+				F0EA0DD51A29A0E800AFB79D /* OptionView.m in Sources */,
+				F0EA0DCF1A297D2000AFB79D /* FolderDragView.m in Sources */,
 				F0EA0DA21A29796400AFB79D /* main.m in Sources */,
+				F0EA0DD81A29BC9400AFB79D /* ProcessView.m in Sources */,
 				F0EA0DC21A29799300AFB79D /* README.md in Sources */,
 				F0EA0DA01A29796400AFB79D /* AppDelegate.m in Sources */,
 			);
@@ -343,10 +361,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExTBatchFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -354,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExTBatchFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
